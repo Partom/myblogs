@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wow Bootstrap Starter Kit</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="wowbootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  Menu <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand nopadding" href="index.html"><img src="img/logo.png"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="elements-slider2.html">Slider</a>
+                  </li>
+                  <li>
+                      <a href="elements-jumbotrons.html">Jumbotrons</a>
+                  </li>
+                  <li>
+                      <a href="elements-mediaembeds.html">Media</a>
+                  </li>
+                  <li>
+                      <a href="elements-buttons.html">Buttons</a>
+                  </li>
+                  <li>
+                      <a href="elements-messages.html">Alerts</a>
+                  </li>
+                  <li>
+                      <a href="elements-newsletter.html">Newsletters</a>
+                  </li>
+                  <li>
+                      <a href="elements-tabs.html">Tabs</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Elements <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>
+                      <a href="elements-forms.html">Forms</a>
+                    </li>
+                    <li>
+                      <a href="elements-icons.html">Icons</a>
+                    </li>
+                    <li>
+                      <a href="elements-navbars.html">Navbars</a>
+                    </li>
+                    <li>
+                      <a href="template-blog.html">Blog</a>
+                    </li>
+                    </ul>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+<!-- Slider -->
+<div class="carousel fade-carousel slide sliderstyle" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active withbg">
+      <div class="slide-1" style="background-image:url(img/slider2.jpg)"></div>
+      <div class="hero text-left container">
+        <hgroup>
+            <h1>Bootstrap Starter</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <button class="btn btn-white btn-lg btnghost btnround" role="button">View More</button> &nbsp; <button class="btn btn-white btn-lg btnround" role="button">Download Now</button>
+      </div>
+    </div>
+    <div class="item slides withbg">
+      <div class="slide-2" style="background-image:url(https://images.unsplash.com/photo-1465145498025-928c7a71cab9?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);"></div>
+      <div class="hero text-left container">
+        <hgroup>
+            <h1>Project Starter</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+    <button class="btn btn-danger btn-lg btnround" role="button">See all features</button>
+      </div>
+    </div>
+    <div class="item slides withbg">
+      <div class="slide-3" style="background-image:url(https://images.unsplash.com/photo-1472461936147-645e2f311a2b?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);"></div>
+      <div class="hero text-left container">
+        <hgroup>
+            <h1>Template Starter</h1>
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+          <button class="btn btn-success btn-lg btnround" role="button">Download now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="title-header gray">
+  <div class="container">
+  <h1>Element Bootstrap Slider 2</h1>
+  <p class="lead">Use this element to quickly develop any new project.</p>
+</div>
+</div>
+
+<div class="container">
+<h3>Use</h3>
+<pre>
+&lt;!-- Slider --&gt;
+&lt;div class=&quot;carousel fade-carousel slide sliderstyle&quot; data-ride=&quot;carousel&quot; data-interval=&quot;4000&quot; id=&quot;bs-carousel&quot;&gt;
+  &lt;!-- Indicators --&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#bs-carousel&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#bs-carousel&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#bs-carousel&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;!-- Wrapper for slides --&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;item slides active withbg&quot;&gt;
+      &lt;div class=&quot;slide-1&quot; style=&quot;background-image:url(imagepath.jpg);&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;hero text-left container&quot;&gt;
+        &lt;hgroup&gt;
+            &lt;h1&gt;Bootstrap Starter&lt;/h1&gt;
+            &lt;h3&gt;Get start your next awesome project&lt;/h3&gt;
+        &lt;/hgroup&gt;
+        &lt;button class=&quot;btn btn-white btn-lg btnghost btnround&quot; role=&quot;button&quot;&gt;See all features&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item slides withbg&quot;&gt;
+      &lt;div class=&quot;slide-2&quot; style=&quot;background-image:url(imagepath.jpg);&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;hero text-left container&quot;&gt;
+        &lt;hgroup&gt;
+            &lt;h1&gt;Project Starter&lt;/h1&gt;
+            &lt;h3&gt;Get start your next awesome project&lt;/h3&gt;
+        &lt;/hgroup&gt;
+    &lt;button class=&quot;btn btn-danger btn-lg btnround&quot; role=&quot;button&quot;&gt;See all features&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item slides withbg&quot;&gt;
+      &lt;div class=&quot;slide-3&quot; style=&quot;background-image:url(imagepath.jpg);&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;hero text-left container&quot;&gt;
+        &lt;hgroup&gt;
+            &lt;h1&gt;Template Starter&lt;/h1&gt;
+            &lt;h3&gt;Get start your next awesome project&lt;/h3&gt;
+        &lt;/hgroup&gt;
+          &lt;button class=&quot;btn btn-success btn-lg btnround&quot; role=&quot;button&quot;&gt;Download now&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+</div>
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+<br/>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/wowbootstrap.js"></script>
+</body>
+</html>
