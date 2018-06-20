@@ -28,6 +28,7 @@
                
                 <cfif user.hasPost()>
                 		<cfloop array="#user.getPosts()#" index="post">
+                        <cfif (post.deleted eq 0)>
                         <div class="blogboxexcerpt">
                             <a href="blog.cfm?id=#post.id#">
                                 <h2 class="post-title">
@@ -41,6 +42,7 @@
                         <p class="post-meta">Posted by <a href="user.cfm?id=#user.id#">#user.name#</a> on #post.dateposted#</p>
                         </div>
                         <hr>
+                        </cfif>
                     </cfloop>
                 <cfelse>
                 	<p>No blog posts yet</p>

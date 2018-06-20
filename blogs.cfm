@@ -1,5 +1,10 @@
  <cfinclude template="header.cfm">
 
+<cfif (structKeyExists(url, "page"))>
+    <cfset page = url.page />
+<cfelse>   
+    <cfset page = 0 >  
+</cfif> 
   <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="jumbotron mediumpadding dark withbg text-center" style="background-image: url('img/pic1.jpg')">
@@ -17,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <cfset posts = entityLoad( "posts")>
+                <cfset posts = entityLoad( "posts",{deleted=0},"dateposted Desc",{offset= page*3, maxResults=3})>
 
                 <cfoutput>
                     <cfloop array="#posts#" index="post">
@@ -35,13 +40,21 @@
                         </div>
                         <hr>
                     </cfloop>
-                </cfoutput>
+                
                 <!-- Pager -->
                 <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                    
+                    <li class="next" >
+                        <a href="blogs.cfm?page=#page+1#">Older Posts &rarr;</a>
                     </li>
+                    <cfif (page gt 0)>
+                        <li class="back" style="float: left;">
+                            <a href="blogs.cfm?page=#page-1#">Newer Posts &larr;</a>
+                        </li>
+                    </cfif> 
+
                 </ul>
+                </cfoutput>
             </div>
         </div>
     </div>

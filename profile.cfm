@@ -30,6 +30,12 @@
                
                 <cfif user.hasPost()>
                 		<cfloop array="#user.getPosts()#" index="post">
+                        <cfif (post.deleted eq 1)>
+                            <a href="actions/add.cfm?action=undeletepost&postid=#post.id#&accessid=#user.id#" class="btn btn-success btn-circle"><i class="fa fa-check" data-toggle="tooltip" data-placement="top" title="UnDelete Post!"></i></a>
+                        <cfelse>
+                            <a href="actions/add.cfm?action=deletepost&postid=#post.id#&accessid=#user.id#" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Delete Post!"><i class="fa fa-close"></i></a>
+                        </cfif>
+                          
                         <div class="blogboxexcerpt">
                             <a href="blog.cfm?id=#post.id#">
                                 <h2 class="post-title">
@@ -40,7 +46,7 @@
                                 </h4>
                             </a>
                         
-                        <p class="post-meta">Posted by <a href="profile.cfm">#user.name#</a> on #post.dateposted#</p>
+                    <p class="post-meta">Posted by <a href="profile.cfm">#user.name#</a> on #post.dateposted#</p>
                         </div>
                         <hr>
                     </cfloop>
@@ -48,14 +54,6 @@
                 	<p>No blog posts yet</p>
                 	<hr>
                 </cfif>
-                    
-            
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="##">Older Posts &rarr;</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -78,3 +76,9 @@
 
 
 <cfinclude template="footer.cfm">
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>

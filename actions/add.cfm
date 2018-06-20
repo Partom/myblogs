@@ -60,6 +60,35 @@
 	<cfset structdelete(session, "user") />
 	<cfset redirectURL="../login.cfm">
 	<CFLOCATION url="#redirectURL#">
+<cfelseif (structKeyExists(url, "action")) AND (structKeyExists(url, "postid")) AND (structKeyExists(url, "accessid"))>
+	<cfif structkeyexists(session, "user")>
+		<cfif (session.user.accountid EQ url.accessid)>
+			<cfif (url.action eq 'undeletepost')>
+				<cfset deletevalue = 0>
+			<cfelseif (url.action eq 'deletepost')>
+				<cfset deletevalue = 1>
+			</cfif>
+			<cfquery name="deletepost" datasource="mysqlsource">
+				update posts set deleted = #deletevalue# where id = #url.postid#
+			</cfquery>
+			<cfset redirectURL="../profile.cfm">
+			<CFLOCATION url="#redirectURL#">
+		<cfelse>
+			<cfoutput>
+				<script type="text/javascript">
+					alert("you are not authurized");
+					window.location.href = '../profile.cfm';
+				</script>
+		</cfoutput>
+		</cfif>
+	<cfelse>
+		<cfoutput>
+		<script type="text/javascript">
+			alert("you are not authurized");
+			window.location.href = '../login.cfm';
+		</script>
+		</cfoutput>
+	</cfif>
 </cfif>
 <cfscript>
 	function addUser(name,email,password){
