@@ -49,6 +49,6 @@ https://localhost:8500/myblogs
 
 ## Authors
 
-* **Aashir Manzoor** - *Initial work* - [github](https://github.com/Partom) - [Linkedin](https://www.linkedin.com/in/aashirmanzoor)
+* **Aashir Manzoor** - *Initial work* - [github](https://github.com/Partom) - [Linkedin](https://www.linkedin.com/in/aashirch/)
 
 Feel Free to contribute and Leave a star.
